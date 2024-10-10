@@ -18,9 +18,9 @@ jobs:
           docker build . -t mbjobb/spring-docker-dockerhub
           
         
-      - name: push docker image to dockerhub
-        run: |
-          docker push mbjobb/spring-docker-dockerhub
+#      - name: push docker image to dockerhub
+#        run: |
+#          docker push mbjobb/spring-docker-dockerhub
           
           
       - name: push Docker image to ecr
