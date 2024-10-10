@@ -10,3 +10,4 @@ FROM eclipse-temurin:17-jre-alpine
 WORKDIR /app
 COPY --from=builder /app/target/*.jar /app/application.jar
 ENTRYPOINT ["java", "-jar", "/app/application.jar"]
+
