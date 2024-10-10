@@ -36,5 +36,5 @@ jobs:
         run: |
           aws ecr get-login-password --region eu-west-1 | docker login --username AWS --password-stdin 244530008913.dkr.ecr.eu-west-1.amazonaws.com 
           docker tag mbjobb/spring-docker-dockerhub 244530008913.dkr.ecr.eu-west-1.amazonaws.com/mabr/ecr-test
-          docker push mbjobb/spring-docker-dockerhub 244530008913.dkr.ecr.eu-west-1.amazonaws.com/mabr/ecr-test
+          docker push 244530008913.dkr.ecr.eu-west-1.amazonaws.com/mabr/ecr-test
       
