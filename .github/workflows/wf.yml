@@ -24,9 +24,9 @@ jobs:
           docker build . -t mbjobb/spring-docker-dockerhub
           
         
-#      - name: push docker image to dockerhub
-#        run: |
-#          docker push mbjobb/spring-docker-dockerhub
+      - name: push docker image to dockerhub
+        run: |
+          docker push mbjobb/spring-docker-dockerhub
           
           
       - name: push Docker image to ecr
@@ -36,6 +36,6 @@ jobs:
         run: |
           aws ecr get-login-password --region eu-west-1 | docker login --username AWS --password-stdin 244530008913.dkr.ecr.eu-west-1.amazonaws.com 
           rev=$(git rev-parse --short HEAD)
-          docker tag spring-docker-test 244530008913.dkr.ecr.eu-west-1.amazonaws.com/mabr/ecr-test:$rev
-          docker push spring-docker-test 244530008913.dkr.ecr.eu-west-1.amazonaws.com/mabr/ecr-test:$rev
+          docker tag mbjobb/spring-docker-dockerhub 244530008913.dkr.ecr.eu-west-1.amazonaws.com/mabr/ecr-test:$rev
+          docker push mbjobb/spring-docker-dockerhub 244530008913.dkr.ecr.eu-west-1.amazonaws.com/mabr/ecr-test:$rev
       
